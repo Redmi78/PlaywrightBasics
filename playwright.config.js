@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { trace } from 'console';
 
 /**
  * Read environment variables from file.
@@ -20,7 +21,9 @@ const config=({
   reporter: 'html',
   use: {
    browserName:'chromium',
-    headless: false
+    headless: false,
+    screenshot: 'on',
+    trace: 'on'
   },
   });
   module.exports = config
