@@ -50,7 +50,7 @@ test('Web Tables Test',async({page})=>{
 const pagination=page.locator(".pagination li a");
 const totalPages = await pagination.count();
 for(let p=1;p<totalPages-1;p++){
-   if(p>1){
+   if(p>2){
     await pagination.nth(p).click();
    }
     const totalRows = await rows.count();
