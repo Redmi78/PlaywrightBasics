@@ -24,6 +24,13 @@ for(const drops of dropDownValues)
         break;
         }
     }
+
+
+await page.locator('#confirm').click();
+await page.on('dialog', async dialog => {
+    console.log(`Dialog message: ${dialog.message()}`);
+    await dialog.accept();
+  })
 });   
 
 
