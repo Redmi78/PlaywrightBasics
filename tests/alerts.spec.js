@@ -15,7 +15,6 @@ await page.locator("//button[@id='alertBtn']").click();
 await page.waitForTimeout(2000);
 
 
-
 });
 
 
